@@ -1,0 +1,10 @@
+layer_media {
+display-name = "media";
+bindings = <
+&none &none &none &none &none &none &none &to LAYER_DVORAK &none &kp C_VOLUME_UP &none &none &none &none
+&trans &none &kp C_REWIND &kp C_FAST_FORWARD &none &none &trans &trans &none &kp HOME &none &none &kp RIGHT_ARROW &kp C_VOLUME_DOWN
+&trans &none &none &none &none &none &trans &trans &trans &trans &trans &trans &none &kp LEFT_ARROW &none &none &none &kp C_VOLUME_DOWN
+&kp C_PREV &none &none &kp DOWN_ARROW &kp UP_ARROW &none &trans &trans &none &kp C_MUTE &none &none &none &kp C_NEXT
+&none &none &none &none &none &trans &trans &trans &trans &trans &trans &none &none &none &none &none
+>;
+};

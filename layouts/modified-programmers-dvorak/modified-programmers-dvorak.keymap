@@ -1,0 +1,192 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/stp.h>
+#include <dt-bindings/zmk/backlight.h>
+#include <dt-bindings/zmk/pointing.h>
+#define LAYER_DVORAK 0
+#define LAYER_DVORAK_GR 1
+#define LAYER_QWERTY 2
+#define LAYER_QWERTY_GR 3
+#define LAYER_KBD_CONTROL 2
+#define LAYER_KEYPAD_AND_FUNCTIONS 5
+#define BLUETOOTH_PROFILE_1 0
+#define BLUETOOTH_PROFILE_2 1
+#define BLUETOOTH_PROFILE_3 2
+#define BLUETOOTH_PROFILE_4 3
+#define BLUETOOTH_PROFILE_WIRED 4
+/ {
+behaviors {
+#include "macros.dtsi"
+#include "version.dtsi"
+shift_caret_tilde: shift_caret_tilde {
+compatible = "zmk,behavior-mod-morph";
+label = "shift_caret_tilde";
+#binding-cells = <0>;
+bindings = <&kp CARET>, <&kp TILDE>;
+mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+shift_excl_one: shift_excl_one {
+compatible = "zmk,behavior-mod-morph";
+label = "shift_excl_one";
+#binding-cells = <0>;
+bindings = <&kp EXCL>, <&kp N1>;
+mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+shift_at_two: shift_at_two {
+compatible = "zmk,behavior-mod-morph";
+label = "shift_at_two";
+#binding-cells = <0>;
+bindings = <&kp AT>, <&kp N2>;
+mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+shift_lpar_three: shift_lpar_three {
+compatible = "zmk,behavior-mod-morph";
+label = "shift_lpar_three";
+#binding-cells = <0>;
+bindings = <&kp LPAR>, <&kp N3>;
+mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+shift_amps_four: shift_amps_four {
+compatible = "zmk,behavior-mod-morph";
+label = "shift_amps_four";
+#binding-cells = <0>;
+bindings = <&kp AMPS>, <&kp N4>;
+mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+shift_prcnt_five: shift_prcnt_five {
+compatible = "zmk,behavior-mod-morph";
+label = "shift_prcnt_five";
+#binding-cells = <0>;
+bindings = <&kp PRCNT>, <&kp N5>;
+mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+shift_hash_six: shift_hash_six {
+compatible = "zmk,behavior-mod-morph";
+label = "shift_hash_six";
+#binding-cells = <0>;
+bindings = <&kp HASH>, <&kp N6>;
+mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+shift_star_seven: shift_star_seven {
+compatible = "zmk,behavior-mod-morph";
+label = "shift_star_seven";
+#binding-cells = <0>;
+bindings = <&kp STAR>, <&kp N7>;
+mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+shift_rpar_eight: shift_rpar_eight {
+compatible = "zmk,behavior-mod-morph";
+label = "shift_rpar_eight";
+#binding-cells = <0>;
+bindings = <&kp RPAR>, <&kp N8>;
+mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+shift_blsh_nine: shift_blsh_nine {
+compatible = "zmk,behavior-mod-morph";
+label = "shift_blsh_nine";
+#binding-cells = <0>;
+bindings = <&kp BSLH>, <&kp N9>;
+mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+shift_pipe_zero: shift_pipe_zero {
+compatible = "zmk,behavior-mod-morph";
+label = "shift_pipe_zero";
+#binding-cells = <0>;
+bindings = <&kp PIPE>, <&kp N0>;
+mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+shift_dollar_grave: shift_dollar_grave {
+compatible = "zmk,behavior-mod-morph";
+label = "shift_dollar_grave";
+#binding-cells = <0>;
+bindings = <&kp DOLLAR>, <&kp GRAVE>;
+mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+shift_dqt_sqt: shift_dqt_sqt {
+compatible = "zmk,behavior-mod-morph";
+label = "shift_dqt_sqt";
+#binding-cells = <0>;
+bindings = <&kp DQT>, <&kp SQT>;
+mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+shift_comma_lt: shift_comma_lt {
+compatible = "zmk,behavior-mod-morph";
+label = "shift_comma_lt";
+#binding-cells = <0>;
+bindings = <&kp COMMA>, <&kp LT>;
+mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+shift_period_gt: shift_period_gt {
+compatible = "zmk,behavior-mod-morph";
+label = "shift_period_gt";
+#binding-cells = <0>;
+bindings = <&kp PERIOD>, <&kp GT>;
+mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+shift_lbrc_lbkt: shift_lbrc_lbkt {
+compatible = "zmk,behavior-mod-morph";
+label = "shift_lbrc_lbkt";
+#binding-cells = <0>;
+bindings = <&kp LBRC>, <&kp LBKT>;
+mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+shift_rbrc_rbkt: shift_rbrc_rbkt {
+compatible = "zmk,behavior-mod-morph";
+label = "shift_rbrc_rbkt";
+#binding-cells = <0>;
+bindings = <&kp RBRC>, <&kp RBKT>;
+mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+};
+keymap {
+compatible = "zmk,keymap";
+layer_dvorak {
+display-name = "dvorak";
+bindings = <
+&shift_caret_tilde &shift_excl_one &shift_at_two &shift_lpar_three &shift_amps_four &shift_prcnt_five &to LAYER_DVORAK &tog LAYER_KBD_CONTROL &shift_hash_six &shift_star_seven &shift_rpar_eight &shift_blsh_nine &shift_pipe_zero &shift_dollar_grave
+&kp EQUAL &shift_dqt_sqt &shift_comma_lt &shift_period_gt &kp P &kp Y &to LAYER_DVORAK &to LAYER_DVORAK &kp F &kp G &kp C &kp R &kp L &kp SLASH
+&kp ESC &kp A &kp O &kp E &kp U &kp I &to LAYER_DVORAK &kp DEL &kp CAPS &kp RGUI &none &to LAYER_DVORAK &kp D &kp H &kp T &kp N &kp S &kp MINUS
+&shift_lbrc_lbkt &kp SEMI &kp Q &kp J &kp K &kp X &kp HOME &kp PG_UP &kp B &kp M &kp W &kp V &kp Z &shift_rbrc_rbkt
+&mo 1 &kp LMETA &kp LSHIFT &kp LALT &kp LCTRL &kp BSPC &kp TAB &kp END &kp PG_DN &kp ENTER &kp SPACE &kp RCTRL &kp RALT &kp RSHIFT &kp RMETA &tog 1
+>;
+};
+layer_media {
+display-name = "media";
+bindings = <
+&none &none &none &none &none &none &none &to LAYER_DVORAK &none &kp C_VOLUME_UP &none &none &none &none
+&trans &none &kp C_REWIND &kp C_FAST_FORWARD &none &none &trans &trans &none &kp HOME &none &none &kp RIGHT_ARROW &kp C_VOLUME_DOWN
+&trans &none &none &none &none &none &trans &trans &trans &trans &trans &trans &none &kp LEFT_ARROW &none &none &none &kp C_VOLUME_DOWN
+&kp C_PREV &none &none &kp DOWN_ARROW &kp UP_ARROW &none &trans &trans &none &kp C_MUTE &none &none &none &kp C_NEXT
+&none &none &none &none &none &trans &trans &trans &trans &trans &trans &none &none &none &none &none
+>;
+};
+layer_kbd_control {
+display-name = "kbd control";
+bindings = <
+&none &none &none &none &none &none &bt BT_SEL BLUETOOTH_PROFILE_WIRED &tog LAYER_KBD_CONTROL &none &none &none &none &none &none
+&none &none &none &none &none &none &bt BT_SEL BLUETOOTH_PROFILE_1 &bt BT_SEL BLUETOOTH_PROFILE_3 &none &none &none &none &none &none
+&trans &none &none &none &none &none &bt BT_SEL BLUETOOTH_PROFILE_2 &macro_ver &bl BL_TOG &none &none &bt BT_SEL BLUETOOTH_PROFILE_4 &none &none &none &none &none &none
+&none &none &none &none &none &none &bl BL_INC &bt BT_CLR &none &none &none &none &none &none
+&none &none &none &none &none &bootloader &sys_reset &bl BL_DEC &bt BT_CLR_ALL &sys_reset &bootloader &none &none &none &none &none
+>;
+};
+extra1 {
+display-name = "Red";
+status = "reserved";
+};
+extra2 {
+display-name = "Purple";
+status = "reserved";
+};
+extra3 {
+display-name = "Cyan";
+status = "reserved";
+};
+extra4 {
+display-name = "Yellow";
+status = "reserved";
+};
+};
+};

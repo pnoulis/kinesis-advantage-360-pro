@@ -1,0 +1,10 @@
+layer_kbd_control {
+display-name = "kbd control";
+bindings = <
+&none &none &none &none &none &none &bt BT_SEL BLUETOOTH_PROFILE_WIRED &tog LAYER_KBD_CONTROL &none &none &none &none &none &none
+&none &none &none &none &none &none &bt BT_SEL BLUETOOTH_PROFILE_1 &bt BT_SEL BLUETOOTH_PROFILE_3 &none &none &none &none &none &none
+&trans &none &none &none &none &none &bt BT_SEL BLUETOOTH_PROFILE_2 &macro_ver &bl BL_TOG &none &none &bt BT_SEL BLUETOOTH_PROFILE_4 &none &none &none &none &none &none
+&none &none &none &none &none &none &bl BL_INC &bt BT_CLR &none &none &none &none &none &none
+&none &none &none &none &none &bootloader &sys_reset &bl BL_DEC &bt BT_CLR_ALL &sys_reset &bootloader &none &none &none &none &none
+>;
+};

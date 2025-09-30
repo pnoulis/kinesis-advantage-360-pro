@@ -1,0 +1,152 @@
+## ^ ~
+shift_caret_tilde: shift_caret_tilde {
+  compatible = "zmk,behavior-mod-morph";
+  label = "shift_caret_tilde";
+  #binding-cells = <0>;
+  bindings = <&kp CARET>, <&kp TILDE>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+## ! 1
+shift_excl_one: shift_excl_one {
+  compatible = "zmk,behavior-mod-morph";
+  label = "shift_excl_one";
+  #binding-cells = <0>;
+  bindings = <&kp EXCL>, <&kp N1>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+## @ 2
+shift_at_two: shift_at_two {
+  compatible = "zmk,behavior-mod-morph";
+  label = "shift_at_two";
+  #binding-cells = <0>;
+  bindings = <&kp AT>, <&kp N2>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+## ( 3
+shift_lpar_three: shift_lpar_three {
+  compatible = "zmk,behavior-mod-morph";
+  label = "shift_lpar_three";
+  #binding-cells = <0>;
+  bindings = <&kp LPAR>, <&kp N3>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+## & 4
+shift_amps_four: shift_amps_four {
+  compatible = "zmk,behavior-mod-morph";
+  label = "shift_amps_four";
+  #binding-cells = <0>;
+  bindings = <&kp AMPS>, <&kp N4>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+## % 5
+shift_prcnt_five: shift_prcnt_five {
+  compatible = "zmk,behavior-mod-morph";
+  label = "shift_prcnt_five";
+  #binding-cells = <0>;
+  bindings = <&kp PRCNT>, <&kp N5>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+## # 6
+shift_hash_six: shift_hash_six {
+  compatible = "zmk,behavior-mod-morph";
+  label = "shift_hash_six";
+  #binding-cells = <0>;
+  bindings = <&kp HASH>, <&kp N6>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+## * 7
+shift_star_seven: shift_star_seven {
+  compatible = "zmk,behavior-mod-morph";
+  label = "shift_star_seven";
+  #binding-cells = <0>;
+  bindings = <&kp STAR>, <&kp N7>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+## ) 8
+shift_rpar_eight: shift_rpar_eight {
+  compatible = "zmk,behavior-mod-morph";
+  label = "shift_rpar_eight";
+  #binding-cells = <0>;
+  bindings = <&kp RPAR>, <&kp N8>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+## \ 9
+shift_blsh_nine: shift_blsh_nine {
+  compatible = "zmk,behavior-mod-morph";
+  label = "shift_blsh_nine";
+  #binding-cells = <0>;
+  bindings = <&kp BSLH>, <&kp N9>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+## | 0
+shift_pipe_zero: shift_pipe_zero {
+  compatible = "zmk,behavior-mod-morph";
+  label = "shift_pipe_zero";
+  #binding-cells = <0>;
+  bindings = <&kp PIPE>, <&kp N0>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+## $ `
+shift_dollar_grave: shift_dollar_grave {
+  compatible = "zmk,behavior-mod-morph";
+  label = "shift_dollar_grave";
+  #binding-cells = <0>;
+  bindings = <&kp DOLLAR>, <&kp GRAVE>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+## " '
+shift_dqt_sqt: shift_dqt_sqt {
+  compatible = "zmk,behavior-mod-morph";
+  label = "shift_dqt_sqt";
+  #binding-cells = <0>;
+  bindings = <&kp DQT>, <&kp SQT>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+## , <
+shift_comma_lt: shift_comma_lt {
+  compatible = "zmk,behavior-mod-morph";
+  label = "shift_comma_lt";
+  #binding-cells = <0>;
+  bindings = <&kp COMMA>, <&kp LT>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+## . >
+shift_period_gt: shift_period_gt {
+  compatible = "zmk,behavior-mod-morph";
+  label = "shift_period_gt";
+  #binding-cells = <0>;
+  bindings = <&kp PERIOD>, <&kp GT>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+## { [
+shift_lbrc_lbkt: shift_lbrc_lbkt {
+  compatible = "zmk,behavior-mod-morph";
+  label = "shift_lbrc_lbkt";
+  #binding-cells = <0>;
+  bindings = <&kp LBRC>, <&kp LBKT>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+## } ]
+shift_rbrc_rbkt: shift_rbrc_rbkt {
+  compatible = "zmk,behavior-mod-morph";
+  label = "shift_rbrc_rbkt";
+  #binding-cells = <0>;
+  bindings = <&kp RBRC>, <&kp RBKT>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};

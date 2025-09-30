@@ -1,0 +1,10 @@
+layer_dvorak {
+display-name = "dvorak";
+bindings = <
+&shift_caret_tilde &shift_excl_one &shift_at_two &shift_lpar_three &shift_amps_four &shift_prcnt_five &to LAYER_DVORAK &tog LAYER_KBD_CONTROL &shift_hash_six &shift_star_seven &shift_rpar_eight &shift_blsh_nine &shift_pipe_zero &shift_dollar_grave
+&kp EQUAL &shift_dqt_sqt &shift_comma_lt &shift_period_gt &kp P &kp Y &to LAYER_DVORAK &to LAYER_DVORAK &kp F &kp G &kp C &kp R &kp L &kp SLASH
+&kp ESC &kp A &kp O &kp E &kp U &kp I &to LAYER_DVORAK &kp DEL &kp CAPS &kp RGUI &none &to LAYER_DVORAK &kp D &kp H &kp T &kp N &kp S &kp MINUS
+&shift_lbrc_lbkt &kp SEMI &kp Q &kp J &kp K &kp X &kp HOME &kp PG_UP &kp B &kp M &kp W &kp V &kp Z &shift_rbrc_rbkt
+&mo 1 &kp LMETA &kp LSHIFT &kp LALT &kp LCTRL &kp BSPC &kp TAB &kp END &kp PG_DN &kp ENTER &kp SPACE &kp RCTRL &kp RALT &kp RSHIFT &kp RMETA &tog 1
+>;
+};
