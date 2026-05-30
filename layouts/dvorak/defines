@@ -1,0 +1,12 @@
+#define LAYER_DVORAK                0
+#define LAYER_DVORAK_GR             1
+#define LAYER_QWERTY                2
+#define LAYER_QWERTY_GR             3
+#define LAYER_KBD_CONTROL           2
+#define LAYER_KEYPAD_AND_FUNCTIONS  5
+
+#define BLUETOOTH_PROFILE_1      0
+#define BLUETOOTH_PROFILE_2      1
+#define BLUETOOTH_PROFILE_3      2
+#define BLUETOOTH_PROFILE_4      3
+#define BLUETOOTH_PROFILE_WIRED  4

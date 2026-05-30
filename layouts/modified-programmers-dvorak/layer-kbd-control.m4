@@ -29,7 +29,7 @@ layer_kbd_control {
      ## Row 1 left
      `blank' `blank' `blank' `blank' `blank' `blank' `&bt BT_SEL BLUETOOTH_PROFILE_WIRED' \
      ## Row 1 right
-     `&tog LAYER_KBD_CONTROL' `blank' `blank' `blank' `blank' `blank' `blank'
+     `&tog 1' `blank' `blank' `blank' `blank' `blank' `blank'
 
      ## Row 2 left
      `blank' `blank' `blank' `blank' `blank' `blank' `&bt BT_SEL BLUETOOTH_PROFILE_1' \

@@ -1,0 +1,15 @@
+## , <
+comma: comma {
+  compatible = "zmk,behavior-mod-morph";
+  #binding-cells = <0>;
+  bindings = <&kp COMMA>, <&kp LT>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+## . >
+dot: dot {
+  compatible = "zmk,behavior-mod-morph";
+  #binding-cells = <0>;
+  bindings = <&kp PERIOD>, <&kp GT>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};

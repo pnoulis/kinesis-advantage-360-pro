@@ -10,7 +10,6 @@ m4_include([[defines]])
 
 / {
     behaviors {
-      #include "macros.dtsi"
       #include "version.dtsi"
 
       m4_include([[behaviors]])
@@ -20,7 +19,6 @@ m4_include([[defines]])
       compatible = "zmk,keymap";
 
       m4_include([[layer-dvorak]])
-      m4_include([[layer-media]])
       m4_include([[layer-kbd-control]])
 
       extra1 {

@@ -1,0 +1,217 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/stp.h>
+#include <dt-bindings/zmk/backlight.h>
+#include <dt-bindings/zmk/pointing.h>
+#define QWERTY 0
+#define DVORAK 1
+#define MOD_DVORAK 2
+#define FN 3
+#define KBDCTRL 4
+#define BT_1 0
+#define BT_2 1
+#define BT_3 2
+#define BT_4 3
+#define BT_WIRED 4
+
+/ {
+
+    behaviors {
+        #include "macros.dtsi"
+        #include "version.dtsi"
+
+        caret: caret {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp CARET>, <&kp TILDE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        excl: excl {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp EXCL>, <&kp N1>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        at: at {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp AT>, <&kp N2>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        lpar: lpar {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp N3>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        amp: amp {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp AMPS>, <&kp N4>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        prcnt: prcnt {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp PRCNT>, <&kp N5>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        hash: hash {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp HASH>, <&kp N6>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        star: star {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp STAR>, <&kp N7>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        rpar: rpar {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RPAR>, <&kp N8>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        blsh: blsh {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BSLH>, <&kp N9>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        pipe: pipe {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp PIPE>, <&kp N0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        dollar: dollar {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOLLAR>, <&kp GRAVE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        comma: comma {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp LT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        dot: dot {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD>, <&kp GT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        lbrc: lbrc {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC>, <&kp LBKT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        rbrc: rbrc {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RBRC>, <&kp RBKT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        qwerty {
+            display-name = "qwerty";
+            bindings = <
+                &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4    &kp N5 &to QWERTY                                                                &tog KBDCTRL &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
+                &kp TAB   &kp Q     &kp W    &kp E    &kp R     &kp T  &to DVORAK                                                                &tog FN      &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
+                &kp ESC   &kp A     &kp S    &kp D    &kp F     &kp G  &to MOD_DVORAK          &kp LCTRL &kp LALT  &kp LGUI  &kp RCTRL           &none        &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+                &kp LSHFT &kp Z     &kp X    &kp C    &kp V     &kp B                          &kp HOME  &kp PG_UP                                            &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+                &mo FN    &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                       &kp BSPC &kp DEL   &kp END   &kp PG_DN &kp ENTER &kp SPACE                     &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo FN
+            >;
+        };
+
+        dvorak {
+            display-name = "dvorak";
+            bindings = <
+                &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4    &kp N5 &to QWERTY                                                                &tog KBDCTRL &kp N6 &kp N7 &kp N8   &kp N9   &kp N0   &kp MINUS
+                &kp TAB   &kp SQT   &comma   &dot     &kp P     &kp Y  &to DVORAK                                                                &tog FN      &kp F  &kp G  &kp C    &kp R    &kp L    &kp SLASH
+                &kp ESC   &kp A     &kp O    &kp E    &kp U     &kp I  &to MOD_DVORAK          &kp LCTRL &kp LALT  &kp LGUI  &kp RCTRL           &none        &kp D  &kp H  &kp T    &kp N    &kp S    &kp BSLH
+                &kp LSHFT &kp SEMI  &kp Q    &kp J    &kp K     &kp X                          &kp HOME  &kp PG_UP                                            &kp B  &kp M  &kp W    &kp V    &kp Z    &kp RSHFT
+                &mo FN    &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                       &kp BSPC &kp DEL   &kp END   &kp PG_DN &kp ENTER &kp SPACE                     &kp UP &kp DOWN &kp LBKT &kp RBKT &mo FN
+            >;
+        };
+
+        mod_dvorak {
+            display-name = "modified dvorak";
+            bindings = <
+                &caret    &excl     &at        &lpar    &amp      &prcnt &to QWERTY                                                               &tog KBDCTRL &hash     &star     &rpar      &blsh      &pipe     &dollar
+                &kp EQUAL &kp SQT   &comma     &dot     &kp P     &kp Y  &to DVORAK                                                               &tog FN      &kp F     &kp G     &kp C      &kp R      &kp L     &kp SLASH
+                &kp ESC   &kp A     &kp O      &kp E    &kp U     &kp I  &to MOD_DVORAK          &kp DEL  &kp CAPS  &kp RGUI  &none               &none        &kp D     &kp H     &kp T      &kp N      &kp S     &kp MINUS
+                &lbrc     &kp SEMI  &kp Q      &kp J    &kp K     &kp X                          &kp HOME &kp PG_UP                                            &kp B     &kp M     &kp W      &kp V      &kp Z     &rbrc
+                &mo FN    &kp LMETA &kp LSHIFT &kp LALT &kp LCTRL                       &kp BSPC &kp TAB  &kp END   &kp PG_DN &kp ENTER &kp SPACE                        &kp RCTRL &kp RALT  &kp RSHIFT &kp RMETA  &mo FN
+            >;
+        };
+
+        fn {
+            display-name = "fn";
+            bindings = <
+                &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &to QWERTY                                               &none    &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
+                &trans &trans &trans &trans &trans &trans &to DVORAK                                               &tog FN  &trans &trans &trans &trans  &trans  &trans
+                &trans &trans &trans &trans &trans &trans &to MOD_DVORAK        &trans &trans &trans &trans        &none    &trans &trans &trans &trans  &trans  &trans
+                &trans &trans &trans &trans &trans &trans                       &trans &trans                               &trans &trans &trans &trans  &trans  &trans
+                &trans &trans &trans &trans &trans                       &trans &trans &trans &trans &trans &trans                 &trans &trans &trans  &trans  &trans
+            >;
+        };
+
+        kbdctrl {
+            display-name = "kbdctrl";
+            bindings = <
+                &none   &none &none &none &none &none &bt BT_SEL BT_WIRED                                                                         &trans          &none &none &none &none &none &none
+                &none   &none &none &none &none &none &bt BT_SEL BT_1                                                                             &bt BT_SEL BT_3 &none &none &none &none &none &none
+                &kp ESC &none &none &none &none &none &bt BT_SEL BT_2                 &macro_ver &bl BL_TOG &studio_unlock &none                  &bt BT_SEL BT_4 &none &none &none &none &none &none
+                &none   &none &none &none &none &none                                            &bl BL_INC &bt BT_CLR                                            &none &none &none &none &none &none
+                &none   &none &none &none &none                           &bootloader &sys_reset &bl BL_DEC &bt BT_CLR_ALL &sys_reset &bootloader                 &none &none &none &none &none
+            >;
+        };
+
+        extra1 {
+            display-name = "Red";    
+            status = "reserved";
+        };
+
+        extra2 { 
+            display-name = "Purple";    
+            status = "reserved";
+        };
+
+        extra3 { 
+            display-name = "Cyan";    
+            status = "reserved";
+        };
+
+        extra4 { 
+            display-name = "Yellow";    
+            status = "reserved";
+        };
+    };
+  };
